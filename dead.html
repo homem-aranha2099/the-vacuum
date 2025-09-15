@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Jersey+10&family=Orbitron:wght@400..900&family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-color: rgb(41, 41, 41);
+        }
+
+        div{
+            color:aliceblue;
+            cursor: pointer;
+            background-color: brown;
+        }
+
+        .botao{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 150px;
+            margin-top: 60px;
+            width: 200px;
+            height: 50px;
+            border-radius: 20px;
+        }
+
+        a{
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            width:200px;
+            height: 50px;
+        }
+
+        section{
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            font-size: 80px;
+            color:brown;
+            z-index: -1;
+            flex-direction: column;
+        }
+
+                p{
+            font-size: 25px;
+            color:silver;
+        }
+    </style>
+</head>
+<body>
+    <section><h1>VOCÊ MORREU</h1><p id="paragrafo"></p></section>
+  <div class="botao"><a href="fase1.html"><div>tentar novamente</div></a></div>
+  <audio autoplay src="gifs\morte.mp3" id="morreu"></audio>
+  <script>
+    const paragrafo = document.getElementById("paragrafo");
+    const item = localStorage.getItem("morte");
+
+    if (item == 1){
+        paragrafo.innerHTML = "Achou mesmo que conseguiria facil assim? Que piada.";
+    }
+  </script>
+</body>
+</html>

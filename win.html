@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Jersey+10&family=Orbitron:wght@400..900&family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-color: rgb(41, 41, 41);
+        }
+
+        div{
+            color:aliceblue;
+            cursor: pointer;
+            background-color: lightskyblue;
+            border-radius: 20px;
+        }
+
+        .botao{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 150px;
+            margin-top: 60px;
+            width: 200px;
+            height: 50px;
+            border-radius: 20px;
+        }
+
+        a{
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            width:200px;
+            height: 50px;
+            border-radius: 20px;
+        }
+
+        section{
+
+            flex-direction: column;
+        }
+
+        h1{
+            font-size: 100px;
+            color:lightskyblue;
+            text-align: center;
+        }
+
+        p{
+            font-size: 25px;
+            color:silver;
+        }
+
+        body{
+            background-image: url("gifs/porta.png");  
+            background-position-x: -560px;    
+        }
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <h1>PARABENS!<br> VOCÊ VENCEU</h1>
+        <p>parabens! você conseguiu fugir do vazio, mas lembre-se, ele sempre estará atras de você.</p>
+    </section>
+  <div class="botao"><a href="index.html"><div>jogar novamente</div></a></div>
+  <audio autoplay src="gifs\porta-rangendo-397874.mp3" ></audio>
+  <audio  src="gifs\vitoria.mp3" id="musica"></audio>
+  <script>
+    const musica = document.getElementById("musica");
+    function musica1(){
+    setTimeout(() => {
+        musica.play();
+    },2500)}
+
+    musica1();
+  </script>
+</body>
+</html>

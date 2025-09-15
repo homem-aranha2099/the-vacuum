@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malha de Divs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Orbitron:wght@400..900&family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+
+        html{
+            max-width: 1360px;
+            max-height: 768px;
+            min-width: 1360px;
+            min-height: 768px;
+        }
+        /* estilo padrão de todo bloco */
+
+        .f5,.f6,.f7,.f8,.f9,.f10,.f11,.f12
+        .e5,.e6,.e7,.e8,.e9,.e10,.e11,.e12,
+        .d5,.d6,.d7,.d8,.d9,.d10,.d11,.d12,
+        .c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12,
+        .b5,.b6,.b7,.b8,.b9,.b10,.b11,.b12{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .f5 > div, .f6 > div, .f7 > div, .f8 > div, .f9 > div, .f10 > div, .f11 > div, .f12 > div,
+        .e5 > div, .e6 > div, .e7 > div, .e8 > div, .e9 > div, .e10 > div, .e11 > div, .e12 > div,
+        .d5 > div, .d6 > div, .d7 > div, .d8 > div, .d9 > div, .d10 > div, .d11 > div, .d12 > div,
+        .c5 > div, .c6 > div, .c7 > div, .c8 > div, .c9 > div, .c10 > div, .c11 > div, .c12 > div,
+        .b5 > div, .b6 > div, .b7 > div, .b8 > div, .b9 > div, .b10 > div, .b11 > div, .b12 > div
+        {
+            margin: 0;
+            padding: 0;
+            width: calc(100% / 3);
+            height: calc(100% / 3);
+        }
+
+        /* caminhos brancos */
+        .a2,.a3,.a4,.a5,.a6,.a7,.a8,.a9,.a10,.a11,.a12,.a13,
+        .b2,.b3,.b4,.b13,.c13,.d13,.e13,.f13,
+        .g13,.g12,.g11,.g10,.g9,.g8,.g7,.g6,.g5{
+            background-color: rgb(236, 236, 236);
+        }
+
+
+
+
+
+        /* saída / meta */
+        .d11 {
+            background-color: v;
+        }
+
+
+        div{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            width: calc(100% / 3);
+            height: calc(100% / 3);
+        }
+.b5 .pb2, .b5 .pc2, .b5 .pb3,
+.b6 .pb2, .b6 .pb1, .b6 .pc3, .b6 .pb3,
+.b7 .pc2, .b7 .pc3, .b7 .pc1, .b7 .pb3,
+.b8 .pb2, .b8 .pc2, .b8 .pb1, .b8 .pc3,
+.b9 .pb2, .b9 .pb1, .b9 .pc1, .b9 .pb3, .b9 .pc3,
+.c5 .pa2, .c5 .pb2, .c5 .pc2,
+.c9 .pa3, .c9 .pb3, .c9 .pc3,
+.d5 .pa2, .d5 .pb2, .d5 .pc2,
+.d6 .pb3,.d6 .pc2,.d6 .pc3,.d6 .pa3,
+.d7 .pa2,.d7 .pa1,.d7 .pa3,
+.d8 .pa2,.d8 .pa1,.d8 .pa3,
+.d9 .pa2, .d9 .pb2, .d9 .pc2,.d9 .pa3,
+.e5 .pa2, .e5 .pb2, .e5 .pc2,
+.e6 .pc2,.e6 .pb2,.e6 .pa2,
+.e7 .pc2,.e7 .pc3,
+.e8 .pc2,.e8 .pc2,.e8 .pc1,
+.e9 .pa2, .e9 .pb2, .e9 .pc2,
+.f7 .pa2,.f7 .pa1,
+.f8 .pa2, .f8 .pa3,.f8 .pb3,
+.f9 .pa2, .f9 .pb2,.f9 .pb1,
+.f5 .pa2,.f5 .pb2,.f5 .pc1,.f5 .pa2,.f5 .pb1,
+.f6 .pa2,.f6 .pa3
+ {
+            background-color: rgb(236, 236, 236);
+        }
+.d8 .pb3{
+    background-color: rgb(116, 189, 116);
+}
+        
+    </style>
+    <link rel="stylesheet" href="fase2.css">
+</head>
+<body>
+
+    <section id="custom-cursor">
+        <video autoplay muted loop src="gifs/3.webm" style="width:57px; height:57px; top:-10px; left:10px"    class="hidden default cursorVideo" alt=""></video>
+        <video autoplay muted loop src="gifs/6.webm" style="top:-30px; left:10px" width="300px" height="300px"  class="hidden up cursorVideo" ></video>
+        <video autoplay muted loop src="gifs/5.webm" style="left: 10px;" width="50px" height="50px"  class="hidden down cursorVideo"></video>
+        <video autoplay muted loop src="gifs/4.webm" style="transform: scaleX(-1); top:-50px; left:-80px"  width="50px" height="50px"  class="hidden left cursorVideo"></video>
+        <video autoplay muted loop src="gifs/4.webm"  width="50px" height="50px"  class="hidden right cursorVideo"></video>
+        <audio autoplay loop src="gifs\music.mp3" id="playerMusica"></audio>
+        <audio autoplay loop src="gifs\vento.mp3" id="vento"></audio>
+        <audio src="gifs/corrida.mp3" id="corrida"></audio>
+        <audio src="gifs/risada.mp3" id="risada"></audio>
+    </section>
+
+
+<!-- Linha A -->
+<div class="a1 bloco"></div>
+<div class="a2 bloco"></div>
+<div class="a3 bloco"></div>
+<div class="a4 bloco"></div>
+<div class="a5 bloco"></div>
+<div class="a6 bloco"></div>
+<div class="a7 bloco"></div>
+<div class="a8 bloco"></div>
+<div class="a9 bloco"></div>
+<div class="a10 bloco"></div>
+<div class="a11 bloco"></div>
+<div class="a12 bloco"></div>
+<div class="a13 bloco"></div>
+
+<!-- Linha B -->
+<div class="b1 bloco"></div>
+<div class="b2 bloco"></div>
+<div class="b3 bloco"></div>
+<div class="b4 bloco"></div>
+<div class="b5">
+    <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco branco"></div>
+    <div class="pb2 bloco branco"></div>
+    <div class="pb3 bloco branco"></div>
+    <div class="pc1 bloco branco"></div>
+    <div class="pc2 bloco branco"></div>
+    <div class="pc3 bloco" ></div>
+</div>
+<div class="b6">
+    <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="b7 ">
+    <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="b8 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="b9 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="b10 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="b11 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="b12 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="b13"></div>
+
+<!-- Linha C -->
+<div class="c1 bloco"></div>
+<div class="c2 bloco"></div>
+<div class="c3 bloco"></div>
+<div class="c4 bloco"></div>
+<div class="c5">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="c6">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="c7 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="c8">
+    <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="c9">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="c10">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="c11">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="c12">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="c13 bloco"></div>
+
+<!-- Linha D -->
+<div class="d1 bloco"></div>
+<div class="d2 bloco"></div>
+<div class="d3 bloco"></div>
+<div class="d4 bloco"></div>
+<div class="d5 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="d6 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="d7 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="d8 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco" onmouseover="fase4()"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="d9 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="d10 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="d11 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="d12 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="d13 bloco"></div>
+
+<!-- Linha E -->
+<div class="e1 bloco"></div>
+<div class="e2 bloco"></div>
+<div class="e3 bloco"></div>
+<div class="e4 bloco"></div>
+<div class="e5 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="e6 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="e7 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="e8 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="e9 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="e10 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="e11 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="e12 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="e13 bloco"></div>
+
+<!-- Linha F -->
+<div class="f1 bloco"></div>
+<div class="f2 bloco"></div>
+<div class="f3 bloco"></div>
+<div class="f4 bloco"></div>
+<div class="f5 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="f6 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="f7 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="f8 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="f9 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="f10 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="f11 ">
+    <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="f12 ">
+        <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="f13 bloco"></div>
+
+<!-- Linha G -->
+<div class="g1 bloco"></div>
+<div class="g2 bloco"></div>
+<div class="g3 bloco"></div>
+<div class="g4 bloco"></div>
+<div class="g5 bloco" onmouseover="preencherCaminho()"></div>
+<div class="g6 bloco"></div>
+<div class="g7 bloco"></div>
+<div class="g8 bloco"></div>
+<div class="g9 bloco"></div>
+<div class="g10 bloco"></div>
+<div class="g11 bloco"></div>
+<div class="g12 bloco"></div>
+<div class="g13 bloco"></div>
+
+
+    <script src="script.js"></script>
+    <script>
+    const corrida = document.getElementById('corrida');
+    const risada = document.getElementById('risada');
+    corrida.currentTime = 118;
+    risada.currentTime = 4;
+
+    setTimeout(() => {
+  window.location.href = "desistencia.html";
+}, 40000);
+
+function preencherCaminho() {
+
+    // Lista de seletores na ordem do caminho (maior conjunto até o bloco verde)
+    const caminho = [
+        '.a2', '.a3', '.a4', '.b2', '.b3', '.b4', '.a5','.a6','.a7','.a8','.a9','.a10','.a11','.a12','.a13','.b13','.c13','.d13','.e13','.f13',
+        '.g13','.g12','.g11','.g10','.g9','.g13','.g8','.g7','.g6','.g5','.f5 .pc1','.f5 .pb1','.f5 .pb2','.f5 .pa2','.e5 .pc2','.e5 .pb2',
+        '.e5 .pa2','.d5 .pc2','.d5 .pb2','.d5 .pa2','.c5 .pc2','.c5 .pb2','.c5 .pa2','.b5 .pc2','.b5 .pb2','.b5 .pb3','.b6 .pb1','.b6 .pb2',
+        '.b6 .pb3','.b6 .pc3','.b7 .pc1','.b7 .pc2','.b7 .pc3','.b7 .pb3','.b8 .pc1','.b8 .pb1','.b8 .pb2','.b8 .pc2','.b8 .pc3','.b9 .pc1',
+        '.b9 .pb1','.b9 .pb2','.b9 .pb3','.b9 .pc3','.c9 .pa3','.c9 .pb3','.c9 .pc3','.d9 .pa3','.d9 .pa2','.d9 .pb2','.d9 .pc2','.e9 .pa2',
+        '.e9 .pb2','.e9 .pc2','.f9 .pa2','.f9 .pb2','.f9 .pb1','.f8 .pb3','.f8 .pb2','.f8 .pa3','.f8 .pa2','.e8 .pc2','.e8 .pc1','.e7 .pc3',
+        '.e7 .pc2','.f7 .pa2','.f7 .pa1','.f6 .pa3','.f6 .pa2','.e6 .pc2','.e6 .pb2','.e6 .pa2','.d6 .pc2','.d6 .pc3','.d6 .pb3','.d6 .pa3',
+        '.d7 .pa1','.d7 .pa2','.d7 .pa3','.d8 .pa1','.d8 .pa2','.d8 .pa3',
+    ];
+
+
+
+    caminho.forEach((selector, index) => {
+
+        const bloco = document.querySelector(selector);
+        if (bloco) {
+            setTimeout(() => {
+                bloco.style.backgroundColor = 'black';
+            }, index * 300); // cada bloco a cada 3 segundos
+        }
+    });
+
+    risada.play();
+
+    setTimeout(() => {
+        corrida.play();
+    }, 700);
+}
+
+    </script>
+</body>
+</html>

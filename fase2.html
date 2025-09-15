@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malha de Divs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Orbitron:wght@400..900&family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        html{
+            max-width: 1360px;
+            max-height: 768px;
+            min-width: 1360px;
+            min-height: 768px;
+        }
+
+        .bloco {
+            background-color: black;
+        }
+
+        .c8{
+            display: flex;
+            background-color: black;
+            flex-wrap: wrap;
+        }
+
+        .c8 > div{
+            margin: 0;
+            padding: 0;
+            width: calc(100% / 3);
+            height: calc(100% / 3);
+            background: black;
+        }
+
+        .c8 > .pb2, .c8 > .pc2, .c8 > .pa2{
+            background-color: rgb(236, 236, 236);
+        }
+
+        /* Caminhos brancos */
+        .a2,.a3,.a4,
+        .b2,.b3,.b4,.b6,.b7,.b8,
+        .c3,.c6,
+        .d3,.d8,
+        .e3,.e8,
+        .f3,.f4,.f5,.f6,.f7,.f8,
+        .a11,.b11,.c11 {
+            background-color: rgb(236, 236, 236);
+        }
+
+        /* Saídas especiais */
+        .d11 {
+            background-color: lightskyblue;
+        }
+        .d6 {
+            background-color: rgb(116, 189, 116);
+        }
+    </style>
+    <link rel="stylesheet" href="fase2.css">
+</head>
+<body>
+
+    <section id="custom-cursor">
+        <video autoplay muted loop src="gifs/3.webm" style="width:57px; height:57px; top:-10px; left:10px"    class="hidden default cursorVideo" alt=""></video>
+        <video autoplay muted loop src="gifs/6.webm" style="top:-30px; left:10px" width="300px" height="300px"  class="hidden up cursorVideo" ></video>
+        <video autoplay muted loop src="gifs/5.webm" style="left: 10px;" width="50px" height="50px"  class="hidden down cursorVideo"></video>
+        <video autoplay muted loop src="gifs/4.webm" style="transform: scaleX(-1); top:-50px; left:-80px"  width="50px" height="50px"  class="hidden left cursorVideo"></video>
+        <video autoplay muted loop src="gifs/4.webm"  width="50px" height="50px"  class="hidden right cursorVideo"></video>
+        <audio autoplay loop src="gifs\music.mp3" id="playerMusica"></audio>
+    </section>
+
+<!-- Linha A -->
+<div class="a1 bloco"></div>
+<div class="a2 bloco"></div>
+<div class="a3 bloco"></div>
+<div class="a4 bloco"></div>
+<div class="a5 bloco"></div>
+<div class="a6 bloco"></div>
+<div class="a7 bloco"></div>
+<div class="a8 bloco"></div>
+<div class="a9 bloco"></div>
+<div class="a10 bloco"></div>
+<div class="a11 bloco"></div>
+<div class="a12 bloco"></div>
+<div class="a13 bloco"></div>
+
+<!-- Linha B -->
+<div class="b1 bloco"></div>
+<div class="b2 bloco"></div>
+<div class="b3 bloco"></div>
+<div class="b4 bloco"></div>
+<div class="b5 bloco"></div>
+<div class="b6 bloco"></div>
+<div class="b7 bloco"></div>
+<div class="b8 bloco"></div>
+<div class="b9 bloco"></div>
+<div class="b10 bloco"></div>
+<div class="b11 bloco" ></div>
+<div class="b12 bloco"></div>
+<div class="b13 bloco"></div>
+
+<!-- Linha C -->
+<div class="c1 bloco"></div>
+<div class="c2 bloco"></div>
+<div class="c3 bloco"></div>
+<div class="c4 bloco"></div>
+<div class="c5 bloco"></div>
+<div class="c6 bloco"></div>
+<div class="c7 bloco"></div>
+<div class="c8">
+    <div class="pa1 bloco"></div>
+    <div class="pa2 bloco"></div>
+    <div class="pa3 bloco"></div>
+    <div class="pb1 bloco"></div>
+    <div class="pb2 bloco"></div>
+    <div class="pb3 bloco"></div>
+    <div class="pc1 bloco"></div>
+    <div class="pc2 bloco"></div>
+    <div class="pc3 bloco"></div>
+</div>
+<div class="c9 bloco"></div>
+<div class="c10 bloco"></div>
+<div class="c11 bloco"></div>
+<div class="c12 bloco"></div>
+<div class="c13 bloco"></div>
+
+<!-- Linha D -->
+<div class="d1 bloco"></div>
+<div class="d2 bloco"></div>
+<div class="d3 bloco"></div>
+<div class="d4 bloco"></div>
+<div class="d5 bloco"></div>
+<div class="d6 bloco" onmouseover="fase3()"></div>
+<div class="d7 bloco"></div>
+<div class="d8 bloco"></div>
+<div class="d9 bloco"></div>
+<div class="d10 bloco"></div>
+<div class="d11 bloco" onmouseover="vencedor()"></div>
+<div class="d12 bloco"></div>
+<div class="d13 bloco"></div>
+
+<!-- Linha E -->
+<div class="e1 bloco"></div>
+<div class="e2 bloco"></div>
+<div class="e3 bloco"></div>
+<div class="e4 bloco"></div>
+<div class="e5 bloco"></div>
+<div class="e6 bloco"></div>
+<div class="e7 bloco"></div>
+<div class="e8 bloco"></div>
+<div class="e9 bloco"></div>
+<div class="e10 bloco"></div>
+<div class="e11 bloco"></div>
+<div class="e12 bloco"></div>
+<div class="e13 bloco"></div>
+
+<!-- Linha F -->
+<div class="f1 bloco"></div>
+<div class="f2 bloco"></div>
+<div class="f3 bloco"></div>
+<div class="f4 bloco"></div>
+<div class="f5 bloco"></div>
+<div class="f6 bloco"></div>
+<div class="f7 bloco"></div>
+<div class="f8 bloco"></div>
+<div class="f9 bloco"></div>
+<div class="f10 bloco"></div>
+<div class="f11 bloco"></div>
+<div class="f12 bloco"></div>
+<div class="f13 bloco"></div>
+
+<!-- Linha G -->
+<div class="g1 bloco"></div>
+<div class="g2 bloco"></div>
+<div class="g3 bloco"></div>
+<div class="g4 bloco"></div>
+<div class="g5 bloco"></div>
+<div class="g6 bloco"></div>
+<div class="g7 bloco"></div>
+<div class="g8 bloco"></div>
+<div class="g9 bloco"></div>
+<div class="g10 bloco"></div>
+<div class="g11 bloco"></div>
+<div class="g12 bloco"></div>
+<div class="g13 bloco"></div>
+<script src="script.js"></script>
+<script>
+setTimeout(() => {
+  window.location.href = "desistencia.html";
+}, 40000);
+</script>
+
+</body>
+</html>

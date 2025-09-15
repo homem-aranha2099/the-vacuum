@@ -1,0 +1,77 @@
+#custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* não bloqueia cliques */
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+    z-index: 9999;
+}
+
+#custom-cursor video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* centraliza o vídeo dentro do container */
+    pointer-events: none;
+    width: 200px;
+    height: 100px;
+    filter: saturate(0%);
+}
+
+* {
+    cursor: none;
+}
+
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+/* estilo padrão de todas as divs do mapa */
+div {
+    background-color: black; /* padrão geral */
+    width: 100px;
+    height: 100px;
+
+}
+
+.hidden{
+    display: none;
+}
+
+.smoke {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  background: rgba(200, 200, 200, 0.5); /* cor cinza clara */
+  border-radius: 50%;
+  pointer-events: none;
+    border: none; /* remove qualquer borda */
+  box-shadow: none; /* remove sombras se houver */
+  z-index: 9998;
+  animation: smokeAnim 1s forwards;
+}
+
+
+
+@keyframes smokeAnim {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-10px, -30px) scale(2);
+    opacity: 0;
+  }
+}
+
+/* estilo especial para grids internos */
+
